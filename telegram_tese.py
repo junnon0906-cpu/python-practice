@@ -7,11 +7,12 @@ message = "⚠️ 測試成功！這是我的課表提醒 Bot"
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
-data = {
+payload = {
     "chat_id": CHAT_ID,
     "text": message
 }
 
-response = requests.post(url, data=data)
+response = requests.post(url, json=payload)  # 改成 json=payload
 
 print("已送出通知")
+print(response.status_code, response.text)  # 這行可以看回傳
