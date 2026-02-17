@@ -2,7 +2,7 @@ import requests
 import datetime
 
 # ---------- 設定 ----------
-TOKEN = "你的TOKEN"        # 換成你 Bot 的 Token
+TOKEN = "8489882646:AAHCleOidktsYOfZ7xxkbiqN8BIaCt2ew7w"        # 換成你 Bot 的 Token
 CHAT_ID = 8463335795       # 你的 chat_id
 
 # 課表設定
