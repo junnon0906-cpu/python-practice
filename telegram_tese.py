@@ -7,8 +7,18 @@ url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
 
 payload = {
     "chat_id": CHAT_ID,
-    "text": "📚 課表提醒測試：如果你看到這行，代表一切正常"
+    "text": "✅ SSL + JSON 測試成功（如果你看到這行就對了）"
 }
 
-r = requests.post(url, json=payload, timeout=10)
-print(r.json())
+try:
+    r = requests.post(
+        url,
+        json=payload,      # ✅ 一定要用 json=
+        timeout=10,        # ✅ 防止卡死
+        verify=True        # ✅ 強制 SSL 驗證
+    )
+    print(r.status_code)
+    print(r.text)
+
+except requests.exceptions.RequestException as e:
+    print("❌ 發送失敗：", e)
