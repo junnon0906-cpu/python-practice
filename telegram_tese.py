@@ -1,6 +1,6 @@
 import requests
 
-TOKEN = "8489882646:AAHCleOidktsYOfZ7xxkbiqN8BIaCt2ew7w"
+TOKEN = "AAHCleOidktsYOfZ7xxkbiqN8BIaCt2ew7w"
 CHAT_ID = "8463335795"
 
 url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
